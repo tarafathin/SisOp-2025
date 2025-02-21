@@ -871,6 +871,7 @@ c. m
 
 d. H
 = 48 (16)
+
 21.	Dengan Keyboard standard ASCII, pada layar monitor nampak tulisan sebagai berikut PRINT X Nyatakan Keluaran pada Keyboard tersebut.
 Jawabannya:
 Karakter P memiliki nilai ASCII: 5016
