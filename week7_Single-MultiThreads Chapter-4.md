@@ -39,9 +39,3 @@ Multi thread artinya program bisa menjalankan **beberapa tugas sekaligus** dalam
 
 ---
 
-
-<img align="center" src="img/Single-MultiThread.png" alt="Perbandingan Single Thread dan Multi Thread" />
-
----
-
-Dengan memahami perbedaan ini, kamu bisa memilih pendekatan yang sesuai saat membuat program: apakah cukup dengan satu alur kerja, atau butuh banyak jalur agar lebih cepat dan efisien.
