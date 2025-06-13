@@ -3,7 +3,6 @@ Perkembangan sistem operasi mencerminkan perubahan besar dalam dunia komputasi, 
 
 ## Evolusi Sistem Operasi Linux
 
-img...
 
 | Tahun | Peristiwa |
 |-------|----------|
@@ -22,7 +21,6 @@ img...
 
 ## Evolusi Sistem Operasi Windows
 
-img...
 
 | Tahun | Peristiwa |
 |-------|----------|
