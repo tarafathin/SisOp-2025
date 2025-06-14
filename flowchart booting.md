@@ -1,6 +1,6 @@
 # Flowchart  Kerja Sistem Operasi dari Laptop Nyala Sampai Laptop Mati
 
-![alt text](?raw=true)
+![alt text](https://github.com/tarafathin/SisOp-2025/blob/main/fw%20booting.drawio.png?raw=true)
 
 ### 1. Nyalakan laptop (tekan power on)
 tekan tombol power, laptop akan mulai menyala
