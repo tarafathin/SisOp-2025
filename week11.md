@@ -29,7 +29,7 @@ Struktur data `struct proc` digunakan untuk menyimpan informasi setiap proses:
    - `RT` = sama dengan `WT`
 
 ### Contoh Input:
-img 
+![alt text](https://github.com/tarafathin/SisOp-2025/blob/main/FCFS%20without%20arrival%20time.jpg?raw=true)
 
 
 ### Rumus Manual:
@@ -83,7 +83,7 @@ Struktur data `struct proc` berisi:
    - `RT = WT`
 
 ### Contoh Input:
-
+![alt text](https://github.com/tarafathin/SisOp-2025/blob/main/FCFS%20algorithm.jpg?raw=true)
 
 ### Rumus Manual:
 
