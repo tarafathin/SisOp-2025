@@ -94,7 +94,7 @@ Keterangan:
 - **Average Waiting Time** = (0 + 1 + 5 + 9) / 4 = 3.75
   
 ## Output Program  
-![alt text](?raw=true)
+![alt text](https://github.com/tarafathin/SisOp-2025/blob/main/SJF%20without%20arrival%20time.jpg?raw=true)
 
 ## Analisis
 1. **Efisiensi**: Dengan mengurutkan proses berdasarkan burst time, algoritma ini meminimalkan average waiting time dan average turnaround time dibanding algoritma seperti FCFS.
