@@ -1,8 +1,61 @@
-# Analisis Hasil Eksekusi Program Penjadwalan SJF (Shortest Job First) Non-Preemptive
+# Analisis Hasil Eksekusi Program Penjadwalan SJF (Shortest Job First) Non-Preemptive without arrival time
+**Nama Anggota**  
 
-## Deskripsi Umum
-Program pada gambar merupakan implementasi algoritma **Shortest Job First (SJF) Non-Preemptive** tanpa waktu kedatangan (arrival time). Dalam algoritma ini, proses yang memiliki **burst time** (waktu eksekusi) paling kecil akan dieksekusi terlebih dahulu. Karena bersifat non-preemptive, proses yang sedang berjalan tidak dapat dihentikan sampai selesai.
+  Afriq Fadlil Azim (3124500043)  
+  
+  Tara Adilah Fathin (3124500055)
 
+## Apa itu SJF? 
+Algoritma Shortest Job First (SJF) Non-Preemptive tanpa waktu kedatangan (arrival time). Dalam algoritma ini, proses yang memiliki burst time (waktu eksekusi) paling kecil akan dieksekusi terlebih dahulu. Karena bersifat non-preemptive, proses yang sedang berjalan tidak dapat dihentikan sampai selesai.
+
+## code program  
+```
+#include<stdio.h>
+struct proc
+{
+    int no,bt,ct,tat,wt;
+};
+struct proc read(int i)
+{
+    struct proc p;
+    printf("\nProcess No: %d\n",i);
+    p.no=i;
+    printf("Enter Burst Time: ");
+    scanf("%d",&p.bt);
+    return p;
+}
+int main()
+{
+    struct proc p[10],tmp;
+    float avgtat=0,avgwt=0;
+    int n,ct=0;
+    printf("<--SJF Scheduling Algorithm Without Arrival Time (Non-Preemptive)-->\n");
+    printf("Enter Number of Processes: ");
+    scanf("%d",&n);
+    for(int i=0;i<n;i++)
+        p[i]=read(i+1);
+    for(int i=0;i<n-1;i++)
+        for(int j=0;j<n-i-1;j++)    
+            if(p[j].bt>p[j+1].bt)
+            {
+				tmp=p[j];
+				p[j]=p[j+1];
+				p[j+1]=tmp;
+            }
+    printf("\nProcessNo\tBT\tCT\tTAT\tWT\tRT\n");
+    for(int i=0;i<n;i++)
+    {
+        ct+=p[i].bt;
+		p[i].ct=p[i].tat=ct;
+		avgtat+=p[i].tat;
+        p[i].wt=p[i].tat-p[i].bt;
+        avgwt+=p[i].wt;
+        printf("P%d\t\t%d\t%d\t%d\t%d\t%d\n",p[i].no,p[i].bt,p[i].ct,p[i].tat,p[i].wt,p[i].wt);
+    }
+    avgtat/=n,avgwt/=n;
+    printf("\nAverage TurnAroundTime=%f\nAverage WaitingTime=%f",avgtat,avgwt);
+}
+```
 ## Data Input
 Jumlah proses: 4
 
@@ -39,6 +92,9 @@ Keterangan:
 ## Perhitungan Rata-Rata
 - **Average Turnaround Time** = (1 + 5 + 9 + 16) / 4 = 7.75
 - **Average Waiting Time** = (0 + 1 + 5 + 9) / 4 = 3.75
+  
+## Output Program  
+![alt text](?raw=true)
 
 ## Analisis
 1. **Efisiensi**: Dengan mengurutkan proses berdasarkan burst time, algoritma ini meminimalkan average waiting time dan average turnaround time dibanding algoritma seperti FCFS.
@@ -220,9 +276,7 @@ for(int i=1; i<n; i++) {
 -Code ini memilih proses yang tercepat diantara yang datang.
 
 ###Output program
-
-
-
+![alt text](https://github.com/tarafathin/SisOp-2025/blob/main/SJF%20algorithm.jpg?raw=true)
 
 **Langkah-Langkah Penjadwalan**
 
@@ -446,7 +500,7 @@ printf("\nAverage TurnAroundTime = %f\nAverage WaitingTime = %f", avgtat, avgwt)
 -Menghitung dan mencetak rata-rata TAT dan WT.
 
 ###output proses
-
+![alt text](https://github.com/tarafathin/SisOp-2025/blob/main/SRTF.jpg?raw=true)
 
 **Input Proses**
 - P1: at=0, bt=7  
